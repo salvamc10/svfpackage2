@@ -1,0 +1,20 @@
+Package: svfpackage2
+Title: What the Package Does (One Line, Title Case)
+Version: 2.0.0.0
+Authors@R: 
+    person("Salvador", "Monreal", , "smonreal5@alu.ucam.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Daniel", "Valero", , "dvalero@umh.es", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Support Vector Frontier (see Valero-Carreras et al., 2022) (SVF) is a 
+    machine learning technique, based on Support Vector Machines (SVM), 
+    used for the estimation of production functions.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 2.10),
+    ROI
+Suggests:
+  ggplot2
