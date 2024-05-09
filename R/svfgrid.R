@@ -1,5 +1,3 @@
-source("~/Documents/GitHub/svfpackage2/R/grid.R")
-
 #' Constructor para la clase SVFGrid
 #'
 #' Esta función crea una instancia de la clase SVFGrid, la cual es una
@@ -18,7 +16,7 @@ source("~/Documents/GitHub/svfpackage2/R/grid.R")
 #' @export
 SVFGrid <- function(data, inputs, outputs, d) {
   grid <- list(data = data, inputs = inputs, outputs = outputs, d = d, df_grid = data.frame(), data_grid = data.frame())
-  class(grid) <- c("SVFGrid", "GRID")
+  class(grid) <- c("SVFGrid", class(grid))
   return(grid)
 }
 

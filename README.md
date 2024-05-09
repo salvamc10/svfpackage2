@@ -26,7 +26,7 @@ library(ROI.plugin.glpk)
 ## basic example codes
 
 # Usar datos de prueba
-data(datos, package = "svfpackage")
+data <- data.frame(x1 = c(1, 2, 3, 4), x2 = c(1, 3, 1, 2), y1 = c(5, 4, 3, 5), y2 = c(3, 1, 2, 4))
 
 # Definición de inputs, outputs y otros parámetros
 inputs <- c("x1", "x2")
@@ -37,7 +37,7 @@ eps <- 0
 method <- 'SSVF'
 
 # Crear y mostrar el objeto SVF
-svf <- create_SVF(method, inputs, outputs, datos, C, eps, d)
+svf <- create_SVF(method, inputs, outputs, data, C, eps, d)
 
 trained_svf <- train.SSVF(svf)
 

@@ -1,7 +1,7 @@
-source("~/Documents/GitHub/svfpackage2/R/svf_functions.R")
+library(svfpackage2)
 
 # Usar datos de prueba
-data <- read.table("~/Documents/GitHub/svfpackage/data/datos2.txt", header = TRUE, sep = ";")
+data <- data.frame(x1 = c(1, 2, 3, 4), x2 = c(1, 3, 1, 2), y1 = c(5, 4, 3, 5), y2 = c(3, 1, 2, 4))
 
 # Definición de inputs, outputs y otros parámetros
 inputs <- c("x1", "x2")

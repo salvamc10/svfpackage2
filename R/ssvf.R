@@ -1,6 +1,3 @@
-source("~/Documents/GitHub/svfpackage2/R/svfgrid.R")
-source("~/Documents/GitHub/svfpackage2/R/svf.R")
-
 library(ROI)
 library(ROI.plugin.glpk)
 
