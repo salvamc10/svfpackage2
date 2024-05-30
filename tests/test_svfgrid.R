@@ -31,7 +31,7 @@ print(paste("Celdas contiguas: (", paste(contiguous_cells, collapse = ", "), ")"
 
 # Ejemplo del calculo de phi para una celda dada
 cell <- c(1, 3)
-phi_list <- calculate_dmu_phi(grid_obj, cell)
+phi_list <- calculate_dmu_phi.SVFGrid(grid_obj, cell)
 print("Vector phi para la celda dada:")
 print(phi_list)
 

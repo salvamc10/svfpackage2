@@ -108,25 +108,18 @@ solve <- function(svf) {
   for (out in seq_len(n_out)) {
     start_index <- (out - 1) * n_var + 1
     end_index <- out * n_var
-    mat_w[[out]] <- round(w_solution[start_index:end_index], 6)
+    mat_w[[out]] <- w_solution[start_index:end_index]
   }
 
   mat_xi <- vector("list", n_out)
   for (out in seq_len(n_out)) {
     start_index <- (out - 1) * n_obs + 1
     end_index <- out * n_obs
-    mat_xi[[out]] <- round(xi_solution[start_index:end_index], 6)
+    mat_xi[[out]] <- xi_solution[start_index:end_index]
   }
 
-  cat("Solucion para w variables:\n")
-  for (out in seq_len(n_out)) {
-    cat(sprintf(" [%s]\n", paste(mat_w[[out]], collapse=", ")))
-  }
+  svf$solution <- SVFPrimalSolution(mat_w, mat_xi)
 
-  cat("Solucion para xi variables:\n")
-  for (out in seq_len(n_out)) {
-    cat(sprintf(" [%s]\n", paste(mat_xi[[out]], collapse=", ")))
-  }
+  return(svf$solution)
 
-  return(list(w = mat_w, xi = mat_xi))
 }
